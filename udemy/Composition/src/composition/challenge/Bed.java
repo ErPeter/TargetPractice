@@ -19,6 +19,8 @@ public class Bed {
         return length;
     }
 
+
+
     public String getMaterial() {
         return material;
     }
