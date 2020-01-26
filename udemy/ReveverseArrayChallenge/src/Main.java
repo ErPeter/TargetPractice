@@ -8,6 +8,7 @@ public class Main {
         System.out.println("How many numbers do you wish to revers? \r");
         int count = scanner.nextInt();
         int[] array = new int[count];
+        System.out.println("Type in " + count +" number");
         for(int i = 0; i < array.length; i++){
             array[i] = scanner.nextInt();
         }
