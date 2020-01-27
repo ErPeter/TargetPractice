@@ -32,6 +32,7 @@ public class MobilePhone {
 
     private void menu(){
         boolean quite = false;
+        int option = 6;
         int chosenNumber;
         String name;
         String phoneNumber;
@@ -39,11 +40,20 @@ public class MobilePhone {
 
         while(!quite){
             System.out.println("Choose from the list");
-            chosenNumber = scan.nextInt();
+            if(scan.hasNextInt()){
+                chosenNumber = scan.nextInt();
+                if (chosenNumber < 8 && chosenNumber > 0){
+                    option = chosenNumber;
+                }else{
+                    System.out.println("The number is invalid, there is no such an option in the menu");
+                }
+            }else {
+                System.out.println("It is not a number");
+            }
             scan.nextLine();
 
 
-            switch (chosenNumber){
+            switch (option){
                 case 1:
                     System.out.println("Enter the name of the contact: \n");
                     name = scan.nextLine();
@@ -77,6 +87,7 @@ public class MobilePhone {
                 case 7:
                     quite = true;
             }
+            option = 6;
         }
     }
 
