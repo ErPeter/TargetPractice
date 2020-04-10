@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Main {
 
-    private static ArrayList<Album> albums = new ArrayList<>();
+    private static List<Album> albums = new ArrayList<>();
 
 
     public static void main(String[] args) {
@@ -35,7 +35,7 @@ public class Main {
 
         albums.add(album);
 
-        LinkedList<Song> playlist = new LinkedList<>();
+        List<Song> playlist = new ArrayList<>();
 
         albums.get(0).addToPlayList("Song3", playlist);
         albums.get(0).addToPlayList("Song5", playlist);
@@ -51,7 +51,7 @@ public class Main {
 
     }
 
-    private static void play(LinkedList<Song> playlist){
+    private static void play(List<Song> playlist){
         Scanner scanner = new Scanner(System.in);
         boolean quit = false;
         boolean forward =  true;
@@ -149,7 +149,7 @@ public class Main {
                 "Press: 6 to remove current song");
     }
 
-    private static void printPlayList(LinkedList<Song> playList){
+    private static void printPlayList(List<Song> playList){
         Iterator<Song> iterator = playList.listIterator();
         System.out.println("========================");
         while (iterator.hasNext()){
